@@ -1,10 +1,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+
+ 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>The CRATED</title>
  <script src="jquery-1.11.1.min.js"></script>
+  <script src="http://github.com/Modernizr/Modernizr/raw/master/modernizr.js"></script>
+<script>
+$(document).ready(function() {
+     $('#loaded').show();
+     $('#loading').hide();
+
+});
+</script>
+    
+
 <style>
+ 
 body {
 background-color: white;
 font-family: "minion-pro",times,serif;
@@ -115,8 +128,6 @@ margin: 8px;
   #video-bg > video {
   display:none;
   }
-
-
  } 
 
 
@@ -181,6 +192,11 @@ margin: 8px;
 </style> 
 </head>
 <body>
+<div id="loading">
+<img src="logo.png" width="350px">
+</div>
+ 
+<div id="loaded">
 	<ul>
     <li> 
       <div id="logo"> <img src="logo.png" width="350px">
@@ -237,5 +253,6 @@ margin: 8px;
           <source type="video/webm" src="http://vimeo.com/106527674#t=0s"
             media="(orientation:portrait)">
          </video>
+      </div>
       </div>
 </body>

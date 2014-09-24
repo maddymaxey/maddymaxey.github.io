@@ -1,1 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>The CRATED</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script src="jquery-1.11.1.min.js"></script>
 
+</head>
+<body>
+	<ul>
+    <li> 
+      <div id="logo"> <img src="logo.png">
+      </div> 
+    </li>
+    <li> 
+      <div id="maintext">
+        <a>Collaborative product development for enhanced apparel and wearable technologies.
+          ABOUT: dolor sit amet, eos modus aliquip diceret ei, ne liber animal iuvaret per, alienum corpora inimicus ea est. Duo cu ridens fuisset imperdiet. In labores iracundia nec, no nam tantas ancillae intellegebat. Vix oblique prompta cu.<br>
+          CLIENTS:, te has luptatum periculis referrentur. Unum pertinacia sit ea, stet delicata mel ex, pro ex laudem voluptua qualisque. Pro ad prima vidisse feugiat, an duo error saepe. Ius no omnium offendit persequeris, ei mea vitae tacimates reformidans, habeo ceteros percipitur ius at. Ex eam ubique accusamus, est omnes aeterno facilis ea.<br>
+          PRESS:purto oratio, assentior constituto consequuntur vis id. Est an diceret habemus recusabo, ea labores rationibus mel. Mei no choro ornatus voluptua, cu vel possim perfecto, eam percipitur disputando id. Te habeo comprehensam sea, pri omnesque adipiscing assueverit ad. Putant gubergren <br> 
+        </a> 
+      </div>
+    </li>
+    <li>
+      <div id="logo">
+        <a href ="http://www.twitter.com/thecrated" target="_blank"> <img src ="twittericon.png" width="30px"></a> 
+        <a href="mailto:future@thecrated.com"><img src ="emailicon.png" width="30px"></a> 
+        <a href="http://www.thecrated.com/experiments" target="_blank"> <img src ="labicon.png" width="30px"></a>
+      </div> 
+    </li>
+  </ul>
+  <div id = "mediaquerytext">
+        <a>Collaborative product development for enhanced apparel and wearable technologies.
+          ABOUT: dolor sit amet, eos modus aliquip diceret ei, ne liber animal iuvaret per, alienum corpora inimicus ea est. Duo cu ridens fuisset imperdiet. In labores iracundia nec, no nam tantas ancillae intellegebat. Vix oblique prompta cu.<br>
+          CLIENTS:, te has luptatum periculis referrentur. Unum pertinacia sit ea, stet delicata mel ex, pro ex laudem voluptua qualisque. Pro ad prima vidisse feugiat, an duo error saepe. Ius no omnium offendit persequeris, ei mea vitae tacimates reformidans, habeo ceteros percipitur ius at. Ex eam ubique accusamus, est omnes aeterno facilis ea.<br>
+          PRESS:purto oratio, assentior constituto consequuntur vis id. Est an diceret habemus recusabo, ea labores rationibus mel. Mei no choro ornatus voluptua, cu vel possim perfecto, eam percipitur disputando id. Te habeo comprehensam sea, pri omnesque adipiscing assueverit ad. Putant gubergren <br> 
+        </a> 
+      </div>
+  </span>
+    </a>
+      <script>
+        $( "li" )
+        .filter( ":odd" )
+        .hide()
+        .end()
+        .filter( ":even" )
+        .hover(function() {
+        $( this )
+        .toggleClass( "active" )
+        .next()
+        .stop( true, true )
+        .slideToggle();
+        });
+      </script>
+      <div id="video-bg">
+  			<video autoplay>
+    			<source type="video/mp4" src="Fabric2.mov"
+            media="(orientation:landscape)">
+   				<source type="video/webm" src="Fabric2.mov"
+            media="(orientation:landscape)">
+          <source type="video/mp4" src="http://vimeo.com/106527674#t=0s"
+            media="(orientation:portrait)">
+          <source type="video/webm" src="http://vimeo.com/106527674#t=0s"
+            media="(orientation:portrait)">
+         </video>
+      </div>
+</body>

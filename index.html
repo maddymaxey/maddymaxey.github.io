@@ -11,14 +11,12 @@
   <script src="http://github.com/Modernizr/Modernizr/raw/master/modernizr.js"></script>
 
   <script>
-    $( document ).ready(function() {
-        console.log( "document loaded" );
-    });
- 
-    $( window ).load(function() {
-        $('#loaded').show();
-        $('#loading').hide();
-    });
+    $(function() {
+  // First get the preload fetches under way
+  $.preload(["Fabric2.mov"]);
+  // Then do anything else that you would normally do here
+  doSomeStuff();
+});
     </script>
     
 
@@ -45,6 +43,11 @@ margin: 0px;
 height: 100% ;
 }
 
+#loaded
+{margin-left:30%;
+margin-right:30%;
+margin-top:8%;}
+
 a { 
 font-weight: normal;
 text-decoration: none;
@@ -55,13 +58,7 @@ img{
   margin :20px;
 }
 
-ul {
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-top:10%;
-  color: black;
-  list-style-type: none;
-  }
+ 
 
 li {
   cursor: default;
@@ -74,6 +71,14 @@ li.active {
 }
 
 #logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+ 
+}
+
+#icons{
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -111,29 +116,26 @@ margin: 8px;
   </script>
 
   #logo{
+   
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align:center;
+ 
+text-align: center;
+position: absolute !important;
+  margin-left: 10%;
+    margin-right: 10%;
+ 
 }
+ 
+ #loaded
+{margin:5%;}
 
-  img {
-    margin:10px;
-  }
 
   body{
   background-image: url("background.png");
   background-color: white;
   }
        
-  ul {
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top:2%;
-    color: black;
-    list-style-type: none;
-    height:0px !important;
-  }
+   
 
   
   #maintext {
@@ -176,14 +178,12 @@ margin: 8px;
 </style> 
 </head>
 <body>
-<div id="loading">
-<img src="logo.png" width="350px">
-</div>
+ 
  
 <div id="loaded">
-	<ul>
+ 
     <li> 
-      <div id="logo"> <img src="logo.png" width="350px"><br> Collaborative product development for enhanced apparel and wearable technologies.
+      <div id="logo"> <img src="logo.png" width="300px" ><br> Collaborative product development for enhanced apparel and wearable technologies.
 
        
 
@@ -200,13 +200,13 @@ Through integrating structural, chemical and electronic technologies into  appar
       </div>
     </li>
     <li>
-      <div id="logo">
+      <div id="icons">
         <a href ="http://www.twitter.com/thecrated" target="_blank"> <img src ="twittericon.png" width="30px"></a> 
         <a href="mailto:future@thecrated.com"><img src ="emailicon.png" width="30px"></a> 
         <a href="http://www.thecrated.com/experiments" target="_blank"> <img src ="labicon.png" width="30px"></a>
       </div> 
     </li>
-  </ul>
+  
    
   </span>
     </a>

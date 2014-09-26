@@ -9,13 +9,13 @@
 <title>The CRATED</title>
  <script src="jquery-1.11.1.min.js"></script>
   <script src="http://github.com/Modernizr/Modernizr/raw/master/modernizr.js"></script>
+  <script src="https://raw.githubusercontent.com/keithhackbarth/jquery-loading/master/jquery.loading.js"></script>
 
   <script>
     $(function() {
-  // First get the preload fetches under way
+ 
   $.preload(["Fabric2.mov"]);
-  // Then do anything else that you would normally do here
-  doSomeStuff();
+ 
 });
     </script>
     
@@ -25,12 +25,7 @@
 
 /* When the body has the loading class, we turn
    the scrollbar off with overflow:hidden */
-body.loading {
-    overflow: hidden;   
-}
- body.loading .modal {
-    display: block;
-}
+ 
  
 body {
 background-color: white;
@@ -178,6 +173,19 @@ position: absolute !important;
 </style> 
 </head>
 <body>
+
+<div id="video-bg">
+        <video autoplay>
+          <source type="video/mp4" src="Fabric2.mov"
+            media="(orientation:landscape)">
+          <source type="video/webm" src="Fabric2.mov"
+            media="(orientation:landscape)">
+          <source type="video/mp4" src="http://vimeo.com/106527674#t=0s"
+            media="(orientation:portrait)">
+          <source type="video/webm" src="http://vimeo.com/106527674#t=0s"
+            media="(orientation:portrait)">
+         </video>
+      </div>
  
  
 <div id="loaded">
@@ -211,18 +219,7 @@ Through integrating structural, chemical and electronic technologies into  appar
   </span>
     </a>
        
-      <div id="video-bg">
-  			<video autoplay>
-    			<source type="video/mp4" src="Fabric2.mov"
-            media="(orientation:landscape)">
-   				<source type="video/webm" src="Fabric2.mov"
-            media="(orientation:landscape)">
-          <source type="video/mp4" src="http://vimeo.com/106527674#t=0s"
-            media="(orientation:portrait)">
-          <source type="video/webm" src="http://vimeo.com/106527674#t=0s"
-            media="(orientation:portrait)">
-         </video>
-      </div>
+       
       </div>
       <div class="modal"></div>
 </body>

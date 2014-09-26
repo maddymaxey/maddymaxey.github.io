@@ -1,22 +1,38 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
 
  
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="user-scalable=no,initial-scale=1">
 <title>The CRATED</title>
  <script src="jquery-1.11.1.min.js"></script>
   <script src="http://github.com/Modernizr/Modernizr/raw/master/modernizr.js"></script>
-<script>
-$(document).ready(function() {
-     $('#loaded').show();
-     $('#loading').hide();
 
-});
-</script>
+  <script>
+    $( document ).ready(function() {
+        console.log( "document loaded" );
+    });
+ 
+    $( window ).load(function() {
+        $('#loaded').show();
+        $('#loading').hide();
+    });
+    </script>
     
 
 <style>
+ 
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;   
+}
+ body.loading .modal {
+    display: block;
+}
  
 body {
 background-color: white;
@@ -65,12 +81,14 @@ li.active {
 }
 
 #video-bg {
+  background-color: white;
   position: fixed;
   top: 0; right: 0; bottom: 0; left: 0;
   overflow: hidden;
   z-index:-1;
 }
 #video-bg > video {
+  background-color: white;
   position: absolute;
   top: 0;
   left: 0;
@@ -78,11 +96,6 @@ li.active {
   height: 100%;
 }
 
-#mediaquerytext{
-  position: absolute !important;
-  top: -9999px !important;
-  left: -9999px !important;
-}
  
  
 user agent stylesheetbody {
@@ -90,7 +103,19 @@ display: block;
 margin: 8px;
 }
 
-@media screen and (max-width:600px) { 
+@media only screen and (max-width:600px) { 
+
+  <script>
+  $("#video-bg").children().attr("disabled","disabled");;
+
+  </script>
+
+  #logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+}
 
   img {
     margin:10px;
@@ -110,69 +135,28 @@ margin: 8px;
     height:0px !important;
   }
 
-  #mediaquerytext{
-   position: absolute !important;
+  
+  #maintext {
+  
+  position: absolute !important;
    top: 200px !important;
    left: 5% !important;
    right: 5% !important;
   }
-
-  #maintext {
-  display:none;
-  }
   
   #video-bg {
-  display:none;
+  display:none !important;
   }
 
   #video-bg > video {
-  display:none;
+  display:none !important;
   }
  } 
 
 
 
 
-@media (max-width:600px) {
-  
-  img {
-    margin:10px;
-  }
-
-  body{
-  background-image: url("background.png");
-  background-color: white;
-  }
-       
-  ul {
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top:2%;
-    color: black;
-    list-style-type: none;
-    height:0px !important;
-  }
-
-  #mediaquerytext{
-   position: absolute !important;
-   top: 200px !important;
-   left: 5% !important;
-   right: 5% !important;
-  }
-
-  #maintext {
-  display:none;
-  }
-  
-  #video-bg {
-  display:none;
-  }
-
-  #video-bg > video {
-  display:none;
-  }
-
-}
+ 
  
 @media (min-aspect-ratio: 16/9) {
   #video-bg > video { height: 300%; top: -100%; }
@@ -199,15 +183,19 @@ margin: 8px;
 <div id="loaded">
 	<ul>
     <li> 
-      <div id="logo"> <img src="logo.png" width="350px">
+      <div id="logo"> <img src="logo.png" width="350px"><br> Collaborative product development for enhanced apparel and wearable technologies.
+
+       
+
+
       </div> 
     </li>
     <li> 
       <div id="maintext">
-        <a>Collaborative product development for enhanced apparel and wearable technologies.
-          ABOUT: dolor sit amet, eos modus aliquip diceret ei, ne liber animal iuvaret per, alienum corpora inimicus ea est. Duo cu ridens fuisset imperdiet. In labores iracundia nec, no nam tantas ancillae intellegebat. Vix oblique prompta cu.<br>
-          CLIENTS:, te has luptatum periculis referrentur. Unum pertinacia sit ea, stet delicata mel ex, pro ex laudem voluptua qualisque. Pro ad prima vidisse feugiat, an duo error saepe. Ius no omnium offendit persequeris, ei mea vitae tacimates reformidans, habeo ceteros percipitur ius at. Ex eam ubique accusamus, est omnes aeterno facilis ea.<br>
-          PRESS:purto oratio, assentior constituto consequuntur vis id. Est an diceret habemus recusabo, ea labores rationibus mel. Mei no choro ornatus voluptua, cu vel possim perfecto, eam percipitur disputando id. Te habeo comprehensam sea, pri omnesque adipiscing assueverit ad. Putant gubergren <br> 
+        <a> <br>
+          
+Through integrating structural, chemical and electronic technologies into  apparel and wearable objects, The CRATED product development studio partners with future-minded companies to go to market. We've provided insights and product development for Vogue, The White House, Intel & Milk Studios and many more. Press includes Fast Company, Google, Inc and PSFK. Through investing branding, strategy, protoyping, insights and design into new products, we take fashion and tech companies into the future. To press fast-forward, sync with us at Future@thecrated.com.<br>
+           <br> 
         </a> 
       </div>
     </li>
@@ -219,29 +207,10 @@ margin: 8px;
       </div> 
     </li>
   </ul>
-  <div id = "mediaquerytext">
-        <a>Collaborative product development for enhanced apparel and wearable technologies.
-          ABOUT: dolor sit amet, eos modus aliquip diceret ei, ne liber animal iuvaret per, alienum corpora inimicus ea est. Duo cu ridens fuisset imperdiet. In labores iracundia nec, no nam tantas ancillae intellegebat. Vix oblique prompta cu.<br>
-          CLIENTS:, te has luptatum periculis referrentur. Unum pertinacia sit ea, stet delicata mel ex, pro ex laudem voluptua qualisque. Pro ad prima vidisse feugiat, an duo error saepe. Ius no omnium offendit persequeris, ei mea vitae tacimates reformidans, habeo ceteros percipitur ius at. Ex eam ubique accusamus, est omnes aeterno facilis ea.<br>
-          PRESS:purto oratio, assentior constituto consequuntur vis id. Est an diceret habemus recusabo, ea labores rationibus mel. Mei no choro ornatus voluptua, cu vel possim perfecto, eam percipitur disputando id. Te habeo comprehensam sea, pri omnesque adipiscing assueverit ad. Putant gubergren <br> 
-        </a> 
-      </div>
+   
   </span>
     </a>
-      <script>
-        $( "li" )
-        .filter( ":odd" )
-        .hide()
-        .end()
-        .filter( ":even" )
-        .hover(function() {
-        $( this )
-        .toggleClass( "active" )
-        .next()
-        .stop( true, true )
-        .slideToggle();
-        });
-      </script>
+       
       <div id="video-bg">
   			<video autoplay>
     			<source type="video/mp4" src="Fabric2.mov"
@@ -255,4 +224,5 @@ margin: 8px;
          </video>
       </div>
       </div>
+      <div class="modal"></div>
 </body>

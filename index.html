@@ -8,24 +8,10 @@
 <meta name="viewport" content="user-scalable=no,initial-scale=1">
 <title>The CRATED</title>
  <script src="jquery-1.11.1.min.js"></script>
-  <script src="http://github.com/Modernizr/Modernizr/raw/master/modernizr.js"></script>
-  <script src="https://raw.githubusercontent.com/keithhackbarth/jquery-loading/master/jquery.loading.js"></script>
-
-  <script>
-    $(function() {
  
-  $.preload(["Fabric2.mov"]);
- 
-});
-    </script>
-    
-
 <style>
  
-
-/* When the body has the loading class, we turn
-   the scrollbar off with overflow:hidden */
- 
+  
  
 body {
 background-color: white;
@@ -97,11 +83,6 @@ li.active {
 }
 
  
- 
-user agent stylesheetbody {
-display: block;
-margin: 8px;
-}
 
 @media only screen and (max-width:600px) { 
 
@@ -116,8 +97,8 @@ margin: 8px;
  
 text-align: center;
 position: absolute !important;
-  margin-left: 10%;
-    margin-right: 10%;
+  margin-left:auto;
+    margin-right:auto;
  
 }
  
@@ -176,14 +157,11 @@ position: absolute !important;
 
 <div id="video-bg">
         <video autoplay>
-          <source type="video/mp4" src="Fabric2.mov"
+          <source type="video/mp4" src="Fabric2.mp4"
             media="(orientation:landscape)">
-          <source type="video/webm" src="Fabric2.mov"
+          <source type="video/webm" src="Fabric2.mp4"
             media="(orientation:landscape)">
-          <source type="video/mp4" src="http://vimeo.com/106527674#t=0s"
-            media="(orientation:portrait)">
-          <source type="video/webm" src="http://vimeo.com/106527674#t=0s"
-            media="(orientation:portrait)">
+          
          </video>
       </div>
  

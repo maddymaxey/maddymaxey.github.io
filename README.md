@@ -1,4 +1,4 @@
-maddymaxey.github.io
+The CRATED landing page
 ====================
 
 Landing page with full screen video background.
